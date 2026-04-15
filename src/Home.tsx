@@ -10,9 +10,14 @@ export default function Home() {
         <div className="logo">
           Freedom<span>Path</span>
         </div>
-        <button type="button" className="nav-cta" onClick={scrollToFeatures}>
-          Start Planning
-        </button>
+        <div className="header-actions">
+          <Link to="/dashboard" className="nav-cta nav-cta--link">
+            ClearDebt
+          </Link>
+          <button type="button" className="nav-cta" onClick={scrollToFeatures}>
+            Start Planning
+          </button>
+        </div>
       </header>
 
       <main className="container">
@@ -32,6 +37,9 @@ export default function Home() {
               <button type="button" className="btn btn-secondary" onClick={scrollToFeatures}>
                 See Features
               </button>
+              <Link to="/dashboard" className="btn btn-secondary">
+                Open ClearDebt
+              </Link>
             </div>
           </div>
 
@@ -97,9 +105,14 @@ export default function Home() {
               Join students using data-driven plans to reduce interest and become debt-free sooner.
             </p>
           </div>
-          <Link to="/signin" className="btn btn-primary">
-            Create Free Account
-          </Link>
+          <div className="cta-actions">
+            <Link to="/signin" className="btn btn-primary">
+              Create Free Account
+            </Link>
+            <Link to="/dashboard" className="btn btn-secondary">
+              Launch ClearDebt
+            </Link>
+          </div>
         </section>
       </main>
 

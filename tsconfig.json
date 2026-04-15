@@ -22,7 +22,11 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["../ClearDebt/client/src/*"]
+    }
   },
-  "include": ["src", "amplify/data/resource.ts"]
+  "include": ["src", "amplify/data/resource.ts", "../ClearDebt/client/src/**/*.ts", "../ClearDebt/client/src/**/*.tsx"]
 }
