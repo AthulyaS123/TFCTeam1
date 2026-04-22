@@ -7,6 +7,8 @@ import SignIn from './SignIn.tsx'
 const ClearDebtLogin = lazy(() => import('../../ClearDebt/client/src/pages/Login.tsx'))
 const ClearDebtLayout = lazy(() => import('../../ClearDebt/client/src/components/Layout.tsx'))
 const ClearDebtDashboard = lazy(() => import('../../ClearDebt/client/src/pages/Dashboard.tsx'))
+const ClearDebtAddLoan = lazy(() => import('../../ClearDebt/client/src/pages/AddLoan.tsx'))
+const ClearDebtLoanProgress = lazy(() => import('../../ClearDebt/client/src/pages/LoanProgress.tsx'))
 const ClearDebtOnboarding = lazy(() => import('../../ClearDebt/client/src/pages/Onboarding.tsx'))
 const ClearDebtInterest = lazy(() => import('../../ClearDebt/client/src/pages/InterestSimulator.tsx'))
 const ClearDebtMonthly = lazy(() => import('../../ClearDebt/client/src/pages/MonthlySimulator.tsx'))
@@ -21,6 +23,8 @@ export default function App() {
           <Route path="login" element={<ClearDebtLogin />} />
           <Route element={<ClearDebtLayout />}>
             <Route index element={<ClearDebtDashboard />} />
+            <Route path="add-loan" element={<ClearDebtAddLoan />} />
+            <Route path="loan/:loanId" element={<ClearDebtLoanProgress />} />
             <Route path="onboarding" element={<ClearDebtOnboarding />} />
             <Route path="simulator/interest" element={<ClearDebtInterest />} />
             <Route path="simulator/monthly" element={<ClearDebtMonthly />} />
