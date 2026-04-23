@@ -1,7 +1,5 @@
 import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
-import '../../../ClearDebt/client/src/index.css'
-import '../../../ClearDebt/client/src/lib/amplify'
 
 export default function ClearDebtBootstrap() {
   return (
