@@ -1,0 +1,229 @@
+/* Onboarding (Drift) custom styles */
+
+:root {
+  --onboard-yellow: #fff9c4;
+  --onboard-dark: #232323;
+  --onboard-accent: #0b1220;
+  --onboard-btn: #0b1220;
+  --onboard-btn-text: #fff;
+  --onboard-btn-radius: 20px;
+  --onboard-font: 'Inter', system-ui, sans-serif;
+}
+
+.ob-shell {
+  min-height: 100vh;
+  background: var(--onboard-yellow);
+  font-family: var(--onboard-font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ob-screen {
+  width: 100vw;
+  max-width: 430px;
+  min-height: 100vh;
+  background: var(--onboard-yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+
+.ob-welcome-body {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.ob-logo-sq {
+  width: 64px;
+  height: 64px;
+  background: #eee;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto 1.2rem auto;
+}
+
+.ob-eyebrow {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.ob-headline {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.ob-desc {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.ob-dark-card {
+  background: var(--onboard-accent);
+  color: #fff;
+  border-radius: 24px;
+  padding: 2rem 1.5rem 1.2rem 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ob-card-sub {
+  font-size: 1.1rem;
+  color: #b8c1e8;
+}
+
+.ob-card-stat {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.ob-btn-primary {
+  background: var(--onboard-btn);
+  color: var(--onboard-btn-text);
+  border: none;
+  border-radius: var(--onboard-btn-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.9rem 2.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ob-btn-primary:hover {
+  background: #232323;
+}
+
+.ob-footnote {
+  font-size: 0.9rem;
+  color: #b8c1e8;
+  margin-top: 0.5rem;
+}
+
+/* Question screen */
+.ob-question {
+  background: var(--onboard-dark);
+  color: #fff;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+  min-height: 70vh;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  box-shadow: 0 -2px 16px rgba(0,0,0,0.04);
+}
+
+.ob-topbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.ob-back-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.ob-topbar-logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ob-q-header {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.ob-q-label {
+  font-size: 1rem;
+  color: #b8c1e8;
+  margin-bottom: 0.5rem;
+}
+
+.ob-q-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+}
+
+.ob-q-body {
+  width: 100%;
+}
+
+.ob-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.ob-option {
+  background: #e3f0ff;
+  color: #232323;
+  border: none;
+  border-radius: var(--onboard-btn-radius);
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1.1rem 0;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+
+.ob-option--selected,
+.ob-option:hover {
+  background: #b8c1e8;
+  color: #0b1220;
+}
+
+.ob-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.ob-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #b8c1e8;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.ob-dot--active {
+  opacity: 1;
+  background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .ob-screen {
+    max-width: 100vw;
+    padding: 0 0.5rem;
+  }
+  .ob-question {
+    margin-top: 2rem;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+  }
+}
